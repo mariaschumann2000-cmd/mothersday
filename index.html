@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muttertag 💐</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Open Sans',sans-serif;
+  background:#fff9f9;
+  color:#333;
+}
+
+section{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:2rem;
+  opacity:0;
+  transition:.8s;
+}
+section.active{opacity:1;}
+
+.script{
+  font-family:'Great Vibes',cursive;
+  font-size:2.5rem;
+}
+
+.square-img{
+  width:260px;
+  height:260px;
+  object-fit:cover;
+  border-radius:20px;
+  margin-bottom:1rem;
+}
+
+.round-img{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  object-fit:cover;
+  margin:1rem 0;
+}
+
+.fahrrad-img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  object-position:center top;
+}
+
+.btn{
+  background:#FF9FCF;
+  color:white;
+  border:none;
+  padding:.8rem 1.8rem;
+  border-radius:30px;
+  margin-top:1.5rem;
+  cursor:pointer;
+}
+
+.btn.back{background:#ccc;color:#333;}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1.5rem;
+  width:90%;
+  margin-top:2rem;
+}
+
+.card{
+  background:#fff;
+  border-radius:14px;
+  box-shadow:0 4px 12px rgba(0,0,0,.1);
+  padding-bottom:1rem;
+  cursor:pointer;
+}
+
+.card img{
+  width:100%;
+  border-radius:14px 14px 0 0;
+}
+
+.link{
+  color:#FF7BA5;
+  text-decoration:none;
+  font-weight:600;
+}
+</style>
+</head>
+
+<body>
+
+<!-- START -->
+<section id="start">
+
+<img src="bilder/geschwister.jpeg" class="square-img">
+
+<h1>Alles Gute zum Muttertag 💐</h1>
+
+<p class="script">Auf dich! 🥂</p>
+
+<img src="bilder/strand.jpeg" class="round-img">
+
+<button class="btn" onclick="goto('seite2')">Los geht's</button>
+
+</section>
+
+<!-- SEITE 2 -->
+<section id="seite2">
+
+<h2 class="script">Liebe Mama,</h2>
+
+<p>
+dieses Jahr müssen wir unser eigentlich geplantes Muttertagsgeschenk leider noch ein wenig aufschieben. 
+Manchmal kommt das Leben dazwischen und bringt unsere Pläne durcheinander.<br><br>
+
+Aber das ist nur aufgeschoben, nicht aufgehoben: 
+Sobald alle wieder fit sind, werden wir unsere gemeinsame Wanderung durch das Elbsandsteingebirge nachholen.🌿<br><br>
+
+Wir wünschen dir von Herzen einen wundervollen Muttertag und freuen uns jetzt schon auf die gemeinsame Zeit mit dir.
+</p>
+
+<img src="bilder/wanderung_klein.jpeg" style="width:80%;max-width:420px;border-radius:12px;">
+
+<div>
+<button class="btn back" onclick="goto('start')">Zurück</button>
+<button class="btn" onclick="goto('seite3')">Weiter</button>
+</div>
+
+</section>
+
+<!-- SEITE 3 -->
+<section id="seite3">
+
+<p>
+Damit dein Muttertag trotzdem etwas ganz Besonderes wird, haben wir uns ein paar schöne Alternativen für dich überlegt.<br><br>
+Wähle einfach aus, worauf du am meisten Lust hast.
+</p>
+
+<button class="btn" onclick="goto('aktiv')">Weiter</button>
+
+</section>
+
+<!-- AKTIVITÄTEN -->
+<section id="aktiv">
+
+<h2>Was soll es sein?</h2>
+
+<p>
+<strong>Wähle dein Abenteuer.</strong><br><br>
+
+Zum Ausklang des Tages lassen wir es uns gemeinsam als Familie beim Grillen im Garten gutgehen, genießen das – hoffentlich – schöne Wetter und stoßen entspannt miteinander an.<br><br>
+
+Alles ist bereits vorbereitet, sodass du dich um nichts kümmern musst und den Tag einfach in vollen Zügen genießen kannst.
+</p>
+
+<img src="bilder/grillen.jpg" class="round-img">
+
+<div class="cards">
+
+<div class="card">
+<img src="bilder/fahrrad.jpeg" class="fahrrad-img">
+<h3>🚲 Fahrradtour zum Zwenkauer See</h3>
+<p>Eis essen, Sonne genießen und optional Boot fahren.</p>
+<p><a class="link" href="https://motorboot-mieten-zwenkau.de/?utm_source=chatgpt.com#santabarara" target="_blank">Website öffnen</a></p>
+</div>
+
+<div class="card">
+<img src="bilder/fahrrad.jpeg" class="fahrrad-img">
+<h3>🚴‍♀️ Fahrradtour in unserer Umgebung</h3>
+<p>Ganz entspannt durch selbst gewählte Ortschaften.</p>
+</div>
+
+<div class="card">
+<h3>⛵ Personenschifffahrt im Leipziger Neuseenland</h3>
+<p>1-stündige Schifffahrten auf dem Markkleeberger See und 2-stündige Schifffahrten auf dem Störmthaler See.</p>
+<p><a class="link" href="https://personenschifffahrt-leipzig.de/fahrplan-2026/" target="_blank">Website öffnen</a></p>
+</div>
+
+<div class="card">
+<h3>🚣‍♀️ Kanutour in Leipzig</h3>
+<p>Ruhige Kanalfahrten in wunderschöner Natur.</p>
+<p><a class="link" href="https://www.stadthafen-leipzig.com/dreier-canadier-ausleihen" target="_blank">Website öffnen</a></p>
+</div>
+
+<div class="card">
+<img src="bilder/strand.jpeg">
+<h3>🍷 Weinwanderung Weingut Bernard Pawis</h3>
+<p>Geführte Weinwanderung mit Verkostung – gemeinsam mit Maria.</p>
+<p><a class="link" href="https://www.weingut-pawis.de/veranstaltungen.html" target="_blank">Website öffnen</a></p>
+</div>
+
+<div class="card">
+<img src="bilder/wandern1.jpeg">
+<h3>⛰️ Wanderung im Elbsandsteingebirge</h3>
+<p>Gemeinsame Wanderung mit Maria.</p>
+</div>
+
+</div>
+
+<div>
+<button class="btn back" onclick="goto('seite3')">Zurück</button>
+<button class="btn" onclick="goto('ende')">Weiter ❤️</button>
+</div>
+
+</section>
+
+<!-- ABSCHLUSS -->
+<section id="ende">
+
+<h2 class="script">Wir haben dich lieb, Mama ❤️</h2>
+<p>Danke für alles.</p>
+
+<button class="btn" onclick="goto('start')">Nochmal ansehen</button>
+
+</section>
+
+<script>
+function goto(id){
+document.querySelectorAll("section").forEach(sec=>{
+sec.style.display="none";
+sec.classList.remove("active");
+});
+const t=document.getElementById(id);
+t.style.display="flex";
+setTimeout(()=>t.classList.add("active"),50);
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+document.querySelectorAll("section").forEach(sec=>{
+if(sec.id!=="start") sec.style.display="none";
+else sec.classList.add("active");
+});
+});
+</script>
+
+</body>
+</html>
